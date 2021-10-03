@@ -109,7 +109,8 @@
                     <h2>What is </br>IPC-SMEMA-9851</h2>
                 </div>
                 <div class="col-md-9">
-                    <p>What is IPC-SMEMA-9851</p>
+                    <p>SMEMA (commonly shortened to) is a simple machine-to-machine communications interface commonly found within the Electronics Assembly industry. It has been superseded by IPC-HERMES-9852 ‘The Hermes Standard’ but is still present on a large number of electronics manufacturing equipment.</p>
+					<p>It operates on the opening and closing of dedicated circuits that are associated with Signals. Compulsory signals are 'Machine Ready' and 'Board Available'. An optional Signal of ‘Bad Board Available’ can be used, which makes the 'Board Available' signal a 'Good Board Available'. Once all circuits are closed, denoting Machine Ready and Board Available, a Printed Circuit Board (PCB) will move between equipment on conveyors.</p>
                 </div>
             </div>
  
@@ -119,7 +120,8 @@
                     <h2>How it works</h2>
                 </div>
                 <div class="col-md-9">
-                    <p>How it works</p>
+                    <p>The adaptor allows IT Professionals to either interact with the raw SMEMA signals found on legacy equipment using a simple API or using the MultiPlug Edge Computing Platform allows them to create a solution using building blocks of MultiPlug software extensions.</p>
+                    <p>Such solutions may be to use SMEMA as an interlock to pause and check if a product should proceed down the production line to the next manufacturing equipment. To achieve this the Adaptor acts as a SMEMA middleman, not turning on either the Machine Ready SMEMA signal, or the Good/Bad Board SMEMA signal until the software check is made.</p>
                 </div>
             </div>
 			<hr class="space m" />
@@ -128,7 +130,8 @@
                     <h2>Use Case</h2>
                 </div>
                 <div class="col-md-9">
-					<p>Navigate to the lower half of this page to discover other uses for the Adaptor.</p>
+					<p>Common uses of the Adaptor would be remote SMEMA state monitoring for a SCADA (Supervisory Control and Data Acquisition) systems and SMEMA Interlocking which may also be connected to barcode reading or a MES (Manufacturing Execution System).</p>
+					<p>Navigate to the lower half of this page to discover more details of uses for the Adaptor.</p>
                 </div>
             </div>
             <hr class="space" />	
@@ -253,7 +256,7 @@ The MultiPlug uses the Publish–Subscribe design pattern where events are mappe
                 </div>
                 <div class="col-md-8">
                     <p>
-						The Adaptor features USB ports and a RS232 serial port which a barcode scanner can be connected to. This means it will be possible at the start of a Hermes enabled production line to either use a scanned barcode as that PCB’s identification for downline Hermes use, or retrieve the PCB data using this scanned barcode from a Manufacturing Execution System (MES), Database or IPC-CPX connection using another MultiPlug Extension dedicated to that task.  
+						The Adaptor features USB ports and a RS232 serial port which a barcode scanner can be connected to. Solutions can be created using MultiPlug of a chain of Events starting with a scanned Barcode, followed by a lookup of that barcode with a Manufacturing Execution System (MES), Database or IPC-CPX connection using another MultiPlug Extension dedicated to that task. After this the SMEMA Machine Available signal can be made. Also see SMEMA Interlocking below. 
 					</p>
                 </div>
             </div>
@@ -265,13 +268,23 @@ The MultiPlug uses the Publish–Subscribe design pattern where events are mappe
                 </div>
                 <div class="col-md-8">
                     <p>
-It may be useful to pause a production line due to an unrelated Hermes situation and rather than stop the equipment locally, a remote stop triggered by a remote user action or third party system. This is possible using the REST API which can control all SMEMA I/O as well as using the Web Browser based user interface.
-</p><p>
-Also while the Hermes Standard intended to try to remove the need for Barcode Readers, it is possible to connect a barcode reader to the Adaptor to use it to double check that the board on the Conveyor is the same as the PCB ID of Hermes. SMEMA will interlock if the IDs are mismatched.
+						It may be useful to pause a production line due to an unrelated situation and rather than stop the equipment locally, a remote stop triggered by a remote user action or third party system. This is possible using the REST API which can control all SMEMA I/O as well as using the Web Browser based user interface.
                     </p>
                 </div>
             </div>
             <hr class="space" />	
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Man-in-the-Middle</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+						You may want to simply pass the state of the SMEMA signals onto a SCADA (Supervisory Control and Data Acquisition) system to simply monitor the movement of a production line. In this situation the SMEMA signals will be relayed instantly from upline to downline equipment and events created in MultiPlug that can be pushed to higher systems using Network Sockets, REST Http, Serial or a bespoke MES interface. This solution would be seen as Read Only.
+                    </p>
+                </div>
+            </div>
+            <hr class="space" />	
+			
             <div class="row">
                 <div class="col-md-4">
                     <h2>General I/O</h2>
@@ -312,6 +325,7 @@ The state of these I/O can then be mapped within MultiPlug to trigger off other 
                     <hr class="space s" />
                     <p class="text-s">
                         Designed in Dorset on the coast</br>
+						In memory of British Entrepreneur Clive Sinclair</br>				
                         Made in the United Kingdom
                     </p>
                     <hr class="space s" />
