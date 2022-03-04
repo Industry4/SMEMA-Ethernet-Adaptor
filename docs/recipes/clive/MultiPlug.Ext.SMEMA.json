@@ -1,0 +1,187 @@
+{
+  "assembly": "MultiPlug.Ext.SMEMA",
+  "properties": {
+    "GlobalStatusEvent": {
+      "Guid": "bbed152a-4f0a-4a09-a6f4-3676995863fe",
+      "Id": "SMEMA.Global.Status",
+      "Description": "Global Status for all Lanes",
+      "Subjects": [
+        "blocked"
+      ],
+      "Keys": [
+        "blocked"
+      ]
+    },
+    "Lanes": [
+      {
+        "BoardAvailable": {
+          "SMEMAMachineReadyEvent": {
+            "Guid": "61882821-74be-4363-ba1e-b556d05c99ec",
+            "Id": "SMEMA.MachineReady",
+            "Description": "SMEMA Machine Ready",
+            "Subjects": [
+              "value"
+            ],
+            "Keys": [
+              "value"
+            ]
+          },
+          "SMEMABoardAvailableSubscription": {
+            "Value": "1",
+            "Guid": "0cc6d0db-8498-4c41-8a44-a443043ed707",
+            "Id": "SMEMA-1-B-1"
+          },
+          "SMEMAFailedBoardAvailableSubscription": {
+            "Value": "1",
+            "Guid": "5e2bd192-5c38-441d-9160-fdf851afb2d9",
+            "Id": "SMEMA-1-B-2"
+          }
+        },
+        "MachineReady": {
+          "SMEMAMachineReadySubscription": {
+            "Value": "1",
+            "Guid": "c1a31e19-f605-4b39-b365-e2e1ad4e2462",
+            "Id": "SMEMA-1-A-1"
+          },
+          "SMEMABoardAvailableEvent": {
+            "Guid": "970c9f16-e85e-432b-a3f7-b959891d3c95",
+            "Id": "SMEMA.BoardAvailable",
+            "Description": "Board Available",
+            "Subjects": [
+              "value"
+            ],
+            "Keys": [
+              "value"
+            ]
+          },
+          "SMEMAFailedBoardAvailableEvent": {
+            "Guid": "7bd44e23-639b-49d2-84ce-8ac6690325ca",
+            "Id": "SMEMA.FailedBoardAvailable",
+            "Description": "Failed Board Available",
+            "Subjects": [
+              "value"
+            ],
+            "Keys": [
+              "value"
+            ]
+          }
+        },
+        "Interlock": {
+          "InterlockSubscription": {
+            "Value": "1",
+            "Guid": "8ed4c273-6a4a-4ef6-9ac2-869241304934",
+            "Id": ""
+          },
+          "MachineReadyEvent": {
+            "Guid": "8e925f96-c4ce-4c09-a5f0-a5ef28087e6a",
+            "Id": "Interlock.MachineReady",
+            "Description": "Machine Ready Interlock",
+            "Subjects": [
+              "value",
+              "enabled",
+              "interlock-latched"
+            ],
+            "Keys": [
+              "value",
+              "enabled",
+              "interlock-latched"
+            ]
+          },
+          "GoodBoardEvent": {
+            "Guid": "13a3db6e-287d-4d8b-850a-24633954b9c3",
+            "Id": "Interlock.GoodBoard",
+            "Description": "Good Board Interlock",
+            "Subjects": [
+              "value",
+              "enabled",
+              "interlock-latched",
+              "divert",
+              "divert-latched"
+            ],
+            "Keys": [
+              "value",
+              "enabled",
+              "interlock-latched",
+              "divert",
+              "divert-latched"
+            ]
+          },
+          "BadBoardEvent": {
+            "Guid": "2721092e-11e3-41ca-b738-9b3fbd3839aa",
+            "Id": "Interlock.BadBoard",
+            "Description": "Bad Board Interlock",
+            "Subjects": [
+              "value",
+              "enabled",
+              "interlock-latched",
+              "divert",
+              "divert-latched"
+            ],
+            "Keys": [
+              "value",
+              "enabled",
+              "interlock-latched",
+              "divert",
+              "divert-latched"
+            ]
+          },
+          "MachineReadyBlockEvent": {
+            "BlockedValue": "1",
+            "UnblockedValue": "0",
+            "BlockedEnabled": true,
+            "UnblockedEnabled": true,
+            "Guid": "eaf5a7a7-f144-4533-997b-4a5ec42f49f2",
+            "Id": "Interlock.MachineReady.Block",
+            "Description": "Machine Ready Interlock Blocking",
+            "Subjects": [
+              "blocked",
+              "smema"
+            ],
+            "Keys": [
+              "blocked",
+              "smema"
+            ]
+          },
+          "GoodBoardBlockEvent": {
+            "BlockedValue": "true",
+            "UnblockedValue": "false",
+            "BlockedEnabled": true,
+            "UnblockedEnabled": true,
+            "Guid": "6981ae77-4133-49f5-8dd3-d3107c6402f8",
+            "Id": "Interlock.GoodBoard.Block",
+            "Description": "Good Board Interlock Blocking",
+            "Subjects": [
+              "blocked",
+              "smema"
+            ],
+            "Keys": [
+              "blocked",
+              "smema"
+            ]
+          },
+          "BadBoardBlockEvent": {
+            "BlockedValue": "true",
+            "UnblockedValue": "false",
+            "BlockedEnabled": true,
+            "UnblockedEnabled": true,
+            "Guid": "d640d28e-c034-4197-be22-52e98001ab28",
+            "Id": "Interlock.BadBoard.Block",
+            "Description": "Bad Board Interlock Blocking",
+            "Subjects": [
+              "blocked",
+              "smema"
+            ],
+            "Keys": [
+              "blocked",
+              "smema"
+            ]
+          }
+        },
+        "Guid": "fc06dc98-911f-4715-91fc-e9941a54172a",
+        "LaneId": "1",
+        "MachineId": "Machine 1",
+        "LoggingLevel": 0
+      }
+    ]
+  }
+}

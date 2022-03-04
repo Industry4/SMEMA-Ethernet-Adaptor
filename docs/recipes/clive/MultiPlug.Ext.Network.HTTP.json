@@ -1,0 +1,41 @@
+{
+  "assembly": "MultiPlug.Ext.Network.HTTP",
+  "properties": {
+    "HttpEndpoints": [],
+    "HttpClients": [
+      {
+        "Guid": "19af304c-8d45-49a2-9889-320734f26141",
+        "Verb": "Get",
+        "Url": "http://www.multiplug.app",
+        "Subscriptions": [
+          {
+            "Guid": "b88f71ed-9875-4460-a8bb-e4e148ebe594",
+            "Id": "Interlock.MachineReady.Block[0]"
+          }
+        ]
+      },
+      {
+        "Guid": "8db4ef24-d944-4417-af81-6fe46f004302",
+        "Verb": "Get",
+        "Url": "http://www.multiplug.app",
+        "Subscriptions": [
+          {
+            "Guid": "34d1e3de-4a23-40fe-a266-5212a393e728",
+            "Id": "Interlock.GoodBoard.Block[0]"
+          }
+        ]
+      },
+      {
+        "Guid": "a9637716-a784-4ee6-b1bf-6f26f1ff685c",
+        "Verb": "Get",
+        "Url": "http://www.multiplug.app",
+        "Subscriptions": [
+          {
+            "Guid": "f18b2d5a-0917-4e9a-9200-da19bb9e7ea6",
+            "Id": "Interlock.BadBoard.Block[0]"
+          }
+        ]
+      }
+    ]
+  }
+}
