@@ -1,40 +1,122 @@
 {
   "assembly": "MultiPlug.Ext.Network.HTTP",
+  "version": "1.0.4.0",
   "properties": {
     "HttpEndpoints": [],
     "HttpClients": [
       {
         "Guid": "19af304c-8d45-49a2-9889-320734f26141",
         "Verb": "Get",
-        "Url": "http://www.multiplug.app",
+        "Url": "https://www.multiplug.app",
         "Subscriptions": [
           {
+            "SubjectRenames": [
+              {
+                "Rename": "",
+                "AddToQuery": true,
+                "AddToBody": false
+              }
+            ],
             "Guid": "b88f71ed-9875-4460-a8bb-e4e148ebe594",
-            "Id": "Interlock.MachineReady.Block[0]"
+            "Id": "lan1-Interlock.MachineReady.Block[0]"
           }
-        ]
+        ],
+        "ResponseEvent": {
+          "Guid": "6ec7172b-315d-4a1a-8eb2-7681be77ebf0",
+          "Id": "ec4572e8-6f33-4318-9f2b-fa9932c6f031",
+          "Description": "HTTP Response",
+          "Group": "HttpClient",
+          "Subjects": [
+            "Response",
+            "StatusCode",
+            "Headers"
+          ],
+          "Keys": [
+            "Response",
+            "StatusCode",
+            "Headers"
+          ]
+        },
+        "Headers": [],
+        "QueryParams": [],
+        "BodyParams": [],
+        "SubjectValueRenames": []
       },
       {
         "Guid": "8db4ef24-d944-4417-af81-6fe46f004302",
         "Verb": "Get",
-        "Url": "http://www.multiplug.app",
+        "Url": "https://www.multiplug.app",
         "Subscriptions": [
           {
+            "SubjectRenames": [
+              {
+                "Rename": "",
+                "AddToQuery": true,
+                "AddToBody": false
+              }
+            ],
             "Guid": "34d1e3de-4a23-40fe-a266-5212a393e728",
-            "Id": "Interlock.GoodBoard.Block[0]"
+            "Id": "lan1-Interlock.GoodBoard.Block[0]"
           }
-        ]
+        ],
+        "ResponseEvent": {
+          "Guid": "434f1d2a-9ca7-4108-b055-d1f7881bd219",
+          "Id": "2bc2e636-96d7-4018-ba13-e0b4ac222872",
+          "Description": "HTTP Response",
+          "Group": "HttpClient",
+          "Subjects": [
+            "Response",
+            "StatusCode",
+            "Headers"
+          ],
+          "Keys": [
+            "Response",
+            "StatusCode",
+            "Headers"
+          ]
+        },
+        "Headers": [],
+        "QueryParams": [],
+        "BodyParams": [],
+        "SubjectValueRenames": []
       },
       {
         "Guid": "a9637716-a784-4ee6-b1bf-6f26f1ff685c",
         "Verb": "Get",
-        "Url": "http://www.multiplug.app",
+        "Url": "https://www.multiplug.app",
         "Subscriptions": [
           {
+            "SubjectRenames": [
+              {
+                "Rename": "",
+                "AddToQuery": true,
+                "AddToBody": false
+              }
+            ],
             "Guid": "f18b2d5a-0917-4e9a-9200-da19bb9e7ea6",
-            "Id": "Interlock.BadBoard.Block[0]"
+            "Id": "lan1-Interlock.BadBoard.Block[0]"
           }
-        ]
+        ],
+        "ResponseEvent": {
+          "Guid": "f27e1ada-cef5-4c75-a5b4-dd8a1d9bec95",
+          "Id": "4c5a4188-045d-4e45-9feb-8a057b4b005e",
+          "Description": "HTTP Response",
+          "Group": "HttpClient",
+          "Subjects": [
+            "Response",
+            "StatusCode",
+            "Headers"
+          ],
+          "Keys": [
+            "Response",
+            "StatusCode",
+            "Headers"
+          ]
+        },
+        "Headers": [],
+        "QueryParams": [],
+        "BodyParams": [],
+        "SubjectValueRenames": []
       }
     ]
   }
