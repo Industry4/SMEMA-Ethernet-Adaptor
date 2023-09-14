@@ -1,0 +1,48 @@
+{
+  "assembly": "MultiPlug.Ext.SerialPort",
+  "version": "1.0.6.0",
+  "properties": {
+    "SerialPorts": [
+      {
+        "Guid": "3a0986b7-c989-405b-a9d0-ac6987474174",
+        "LoggingLevel": 0,
+        "LoggingShowControlCharacters": false,
+        "ReadEvent": {
+          "Guid": "5446a262-1490-4dc1-b822-df9436fc9ef9",
+          "Id": "SerialPortRead-51b00ab",
+          "Description": "Serial Port Read",
+          "Group": "",
+          "Subjects": [
+            "ReadValue"
+          ],
+          "Keys": [
+            "ReadValue"
+          ]
+        },
+        "WriteSubscriptions": [
+          {
+            "Guid": "273dc9ee-9ca5-431d-bca8-1bc9901bdcc0",
+            "Id": "lan1-SMEMAFlipBoard[0]"
+          }
+        ],
+        "PortName": "/dev/ttyUSB0",
+        "BaudRate": 9600,
+        "Parity": 0,
+        "DataBits": 0,
+        "StopBits": 0,
+        "WriteTimeout": 0,
+        "ReadTimeout": 0,
+        "ReadStrategy": 0,
+        "ReadTo": null,
+        "ReadTrim": false,
+        "ReadPrefix": "",
+        "ReadAppend": "",
+        "ReadRetryAfter": 2,
+        "Enabled": true,
+        "WritePrefix": "AT+CH1=",
+        "WriteSeparator": "",
+        "WriteAppend": ""
+      }
+    ]
+  }
+}
