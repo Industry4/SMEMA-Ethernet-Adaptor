@@ -1,0 +1,1108 @@
+{
+    "extensions": [{
+            "assembly": "MultiPlug.Ext.SerialPort",
+            "version": "1.0.6.0",
+            "properties": {
+                "SerialPorts": [{
+                        "Guid": "de288aa1-17d3-4b95-9ced-baae0951ef61",
+                        "LoggingLevel": 0,
+                        "LoggingShowControlCharacters": false,
+                        "ReadEvent": {
+                            "Guid": "f263e119-c21b-45b0-9b8b-d57114850bd6",
+                            "Id": "SerialPort-Adaptor",
+                            "Description": "Adaptor Serial Port Read",
+                            "Group": "",
+                            "Subjects": ["value"],
+                            "Keys": ["value"]
+                        },
+                        "WriteSubscriptions": [],
+                        "PortName": "/dev/ttyAMA0",
+                        "BaudRate": 115200,
+                        "Parity": 0,
+                        "DataBits": 0,
+                        "StopBits": 0,
+                        "WriteTimeout": 0,
+                        "ReadTimeout": 0,
+                        "ReadStrategy": 0,
+                        "ReadTo": null,
+                        "ReadTrim": false,
+                        "ReadPrefix": "",
+                        "ReadAppend": "",
+                        "ReadRetryAfter": 2,
+                        "Enabled": false,
+                        "WritePrefix": "",
+                        "WriteSeparator": "",
+                        "WriteAppend": ""
+                    }
+                ]
+            }
+        }, {
+            "assembly": "MultiPlug.Ext.Recipe.File",
+            "version": "1.0.14.0",
+            "properties": {}
+        }, {
+            "assembly": "MultiPlug.Ext.Thm.Default2016",
+            "version": "1.0.27.0",
+            "properties": {}
+        }, {
+            "assembly": "MultiPlug.Ext.Nuget",
+            "version": "1.0.5.0",
+            "properties": {}
+        }, {
+            "assembly": "MultiPlug.Ext.SMEMA",
+            "version": "1.0.17.0",
+            "properties": {
+                "GlobalStatusEvent": {
+                    "Guid": "e2c611a0-4bb0-4bb3-9e93-f3e06dff1895",
+                    "Id": "SMEMA.Global.Status",
+                    "Description": "Global Status for all Lanes",
+                    "Group": "",
+                    "Subjects": ["blocked"],
+                    "Keys": ["blocked"]
+                },
+                "Lanes": [{
+                        "BoardAvailable": {
+                            "SMEMAMachineReadyEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "c7b6875e-709e-4f00-855f-89a474f4c452",
+                                "Id": "lan1-SMEMAMachineReady",
+                                "Description": "SMEMA Machine Ready",
+                                "Group": "lan1",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMABoardAvailableSubscription": {
+                                "Value": "1",
+                                "Guid": "098f0807-76fd-4a0c-9623-5bdf6700e8be",
+                                "Id": "SMEMA-1-B-2"
+                            },
+                            "SMEMAFailedBoardAvailableSubscription": {
+                                "Value": "1",
+                                "Guid": "b2736264-2d87-4636-ac66-1ecb36260b70",
+                                "Id": "SMEMA-1-B-3"
+                            },
+                            "SMEMAFlipBoardSubscription": {
+                                "Value": "1",
+                                "Guid": "834a811f-6e05-45ed-977f-2d6b37c3aefc",
+                                "Id": ""
+                            },
+                            "SMEMABoardAvailableAlways": false,
+                            "SMEMAFailedBoardAvailableAlways": false,
+                            "SMEMAFlipBoardAlways": false
+                        },
+                        "MachineReady": {
+                            "SMEMAMachineReadySubscription": {
+                                "Value": "1",
+                                "Guid": "d8891491-e159-4ef3-a7ee-3cde4b7b2792",
+                                "Id": "SMEMA-1-A-1"
+                            },
+                            "SMEMABoardAvailableEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "08ffeefd-d711-4086-aa11-49d4ac19cef7",
+                                "Id": "lan1-SMEMABoardAvailable",
+                                "Description": "Good Board Available",
+                                "Group": "lan1",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMAFailedBoardAvailableEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "29110851-9cd3-4787-ae75-3f9fe1ae04a3",
+                                "Id": "lan1-SMEMAFailedBoardAvailable",
+                                "Description": "Bad Board Available",
+                                "Group": "lan1",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMAFlipBoardEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "eff32f21-9804-4ddf-a19b-8432655b8959",
+                                "Id": "lan1-SMEMAFlipBoard",
+                                "Description": "Flip Board",
+                                "Group": "lan1",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMAMachineReadyAlways": false
+                        },
+                        "Interlock": {
+                            "MachineReadyInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "Guid": "23779c70-8f41-48e0-bfd0-101a577b3bb6",
+                                "Id": ""
+                            },
+                            "GoodBoardInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "DivertOn": "",
+                                "DivertOff": "",
+                                "DivertLatchOn": "",
+                                "DivertLatchOff": "",
+                                "UnblockFlipOn": "",
+                                "BlockFlipOff": "",
+                                "DivertOnFlipOn": "",
+                                "DivertOffFlipOff": "",
+                                "Guid": "a67bae45-0394-4374-9a22-a118c6087431",
+                                "Id": ""
+                            },
+                            "BadBoardInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "DivertOn": "",
+                                "DivertOff": "",
+                                "DivertLatchOn": "",
+                                "DivertLatchOff": "",
+                                "UnblockFlipOn": "",
+                                "BlockFlipOff": "",
+                                "DivertOnFlipOn": "",
+                                "DivertOffFlipOff": "",
+                                "Guid": "2588f8b6-2c03-41e6-b15e-30ea29aba853",
+                                "Id": ""
+                            },
+                            "FlipBoardInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "Guid": "099c1863-271c-4d4f-bd2a-422a4cb11773",
+                                "Id": ""
+                            },
+                            "MachineReadyEvent": {
+                                "Guid": "302040fd-b951-498d-8772-b338d01d9675",
+                                "Id": "lan1-Interlock.MachineReady",
+                                "Description": "Machine Ready Interlock",
+                                "Group": "lan1",
+                                "Subjects": ["value", "enabled", "interlock-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched"]
+                            },
+                            "GoodBoardEvent": {
+                                "Guid": "485720de-5df9-4232-9d31-bc9b38de3772",
+                                "Id": "lan1-Interlock.GoodBoard",
+                                "Description": "Good Board Interlock",
+                                "Group": "lan1",
+                                "Subjects": ["value", "enabled", "interlock-latched", "divert", "divert-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched", "divert", "divert-latched"]
+                            },
+                            "BadBoardEvent": {
+                                "Guid": "6f85a6de-3f96-4cdb-8e9f-cd16af4b2e49",
+                                "Id": "lan1-Interlock.BadBoard",
+                                "Description": "Bad Board Interlock",
+                                "Group": "lan1",
+                                "Subjects": ["value", "enabled", "interlock-latched", "divert", "divert-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched", "divert", "divert-latched"]
+                            },
+                            "MachineReadyBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": false,
+                                "UnblockedEnabled": false,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "f502aba5-1cd0-47d8-a830-efb40e9f3a61",
+                                "Id": "lan1-Interlock.MachineReady.Block",
+                                "Description": "Machine Ready Interlock Blocking",
+                                "Group": "lan1",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "GoodBoardBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": false,
+                                "UnblockedEnabled": false,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "66634f6a-9dcb-431f-8acc-c4c9e8b52ef4",
+                                "Id": "lan1-Interlock.GoodBoard.Block",
+                                "Description": "Good Board Interlock Blocking",
+                                "Group": "lan1",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "BadBoardBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": false,
+                                "UnblockedEnabled": false,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "25bd378f-b893-4ef0-a8ed-7dce087b27d7",
+                                "Id": "lan1-Interlock.BadBoard.Block",
+                                "Description": "Bad Board Interlock Blocking",
+                                "Group": "lan1",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "FlipBoardBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": false,
+                                "UnblockedEnabled": false,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "9d10e5ad-d474-46c3-a735-108bdf2c1a9a",
+                                "Id": "lan1-Interlock.FlipBoard.Block",
+                                "Description": "Flip Board Interlock Blocking",
+                                "Group": "lan1",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "FlipBoardEvent": {
+                                "Guid": "e3a52919-953d-4603-8fc2-39e912fb265d",
+                                "Id": "lan1-Interlock.FlipBoard",
+                                "Description": "Flip Board Interlock",
+                                "Group": "lan1",
+                                "Subjects": ["value", "enabled", "interlock-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched"]
+                            },
+                            "StartupMachineReady": 0,
+                            "StartupGoodBoard": 0,
+                            "StartupBadBoard": 0,
+                            "StartupFlipBoard": 0,
+                            "PersistentMachineReady": false,
+                            "PersistentMachineReadyLatch": false,
+                            "PersistentGoodBoard": false,
+                            "PersistentGoodBoardLatch": false,
+                            "PersistentBadBoard": false,
+                            "PersistentBadBoardLatch": false,
+                            "PersistentFlipBoard": false,
+                            "PersistentFlipBoardLatch": false,
+                            "PermissionInterfaceUI": true,
+                            "PermissionInterfaceREST": true,
+                            "PermissionInterfaceSubscriptions": true,
+                            "TriggerBlockGoodBoardOnMachineNotReady": false,
+                            "TriggerBlockBadBoardOnMachineNotReady": false,
+                            "TriggerBlockFlipBoardOnMachineNotReady": false,
+                            "TriggerBlockFlipBoardOnGoodBoardNotAvailable": false,
+                            "TriggerBlockFlipBoardOnBadBoardNotAvailable": false,
+                            "DelayFlipThenBoardAvailable": 0,
+                            "DelayGoodBoardUnblockedThenSMEMA": 0,
+                            "DelayGoodBoardDivertUnblockedThenSMEMA": 0,
+                            "DelayBadBoardUnblockedThenSMEMA": 0,
+                            "DelayBadBoardDivertUnblockedThenSMEMA": 0,
+                            "DelayMachineReadyUnblockedThenSMEMA": 0,
+                            "DelayFlipUnblockedThenSMEMA": 0
+                        },
+                        "Guid": "lan1",
+                        "LaneId": "1",
+                        "MachineId": "Interlock A",
+                        "RightToLeft": false,
+                        "LoggingLevel": 0
+                    }, {
+                        "BoardAvailable": {
+                            "SMEMAMachineReadyEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "0d211efe-1692-491a-b322-f1e2ee818269",
+                                "Id": "lan2-SMEMAMachineReady",
+                                "Description": "SMEMA Machine Ready",
+                                "Group": "lan2",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMABoardAvailableSubscription": {
+                                "Value": "1",
+                                "Guid": "b9d346f4-658a-4583-9025-6be6e13cc0d6",
+                                "Id": "SMEMA-2-B-2"
+                            },
+                            "SMEMAFailedBoardAvailableSubscription": {
+                                "Value": "1",
+                                "Guid": "3ba597a8-1946-4943-bcc8-fb0388718b93",
+                                "Id": "SMEMA-2-B-3"
+                            },
+                            "SMEMAFlipBoardSubscription": {
+                                "Value": "1",
+                                "Guid": "b1c3d0bc-42ce-4601-a889-6571f36efec2",
+                                "Id": ""
+                            },
+                            "SMEMABoardAvailableAlways": false,
+                            "SMEMAFailedBoardAvailableAlways": false,
+                            "SMEMAFlipBoardAlways": false
+                        },
+                        "MachineReady": {
+                            "SMEMAMachineReadySubscription": {
+                                "Value": "1",
+                                "Guid": "d34f646a-2caa-49a9-9a44-d46c0e00a50d",
+                                "Id": "SMEMA-2-A-1"
+                            },
+                            "SMEMABoardAvailableEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "e9e6bcfd-63c9-4901-82b6-1e31804074d1",
+                                "Id": "lan2-SMEMABoardAvailable",
+                                "Description": "Good Board Available",
+                                "Group": "lan2",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMAFailedBoardAvailableEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "f0bf6221-eca5-4355-96c8-94d47d8957ea",
+                                "Id": "lan2-SMEMAFailedBoardAvailable",
+                                "Description": "Bad Board Available",
+                                "Group": "lan2",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMAFlipBoardEvent": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "d9f01ff3-c1ee-41d1-91e9-e5f6084382e9",
+                                "Id": "lan2-SMEMAFlipBoard",
+                                "Description": "Flip Board",
+                                "Group": "lan2",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "SMEMAMachineReadyAlways": false
+                        },
+                        "Interlock": {
+                            "MachineReadyInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "Guid": "b499d187-54ee-417a-a78d-4c8f5838d71a",
+                                "Id": ""
+                            },
+                            "GoodBoardInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "DivertOn": "",
+                                "DivertOff": "",
+                                "DivertLatchOn": "",
+                                "DivertLatchOff": "",
+                                "UnblockFlipOn": "",
+                                "BlockFlipOff": "",
+                                "DivertOnFlipOn": "",
+                                "DivertOffFlipOff": "",
+                                "Guid": "f1a66af4-787c-4897-a46c-7433cc17dac2",
+                                "Id": ""
+                            },
+                            "BadBoardInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "DivertOn": "",
+                                "DivertOff": "",
+                                "DivertLatchOn": "",
+                                "DivertLatchOff": "",
+                                "UnblockFlipOn": "",
+                                "BlockFlipOff": "",
+                                "DivertOnFlipOn": "",
+                                "DivertOffFlipOff": "",
+                                "Guid": "3608539e-f7ca-441f-9cc8-3fd22166b6ca",
+                                "Id": ""
+                            },
+                            "FlipBoardInterlockSubscription": {
+                                "Block": "",
+                                "Unblock": "",
+                                "LatchOn": "",
+                                "LatchOff": "",
+                                "Guid": "152881a6-3eca-4fb6-b02e-848f05965cce",
+                                "Id": ""
+                            },
+                            "MachineReadyEvent": {
+                                "Guid": "c38e0762-3f1b-4158-bea3-9dabc8cf5bbf",
+                                "Id": "lan2-Interlock.MachineReady",
+                                "Description": "Machine Ready Interlock",
+                                "Group": "lan2",
+                                "Subjects": ["value", "enabled", "interlock-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched"]
+                            },
+                            "GoodBoardEvent": {
+                                "Guid": "4b1338df-c36f-4938-a567-4915e32a31ab",
+                                "Id": "lan2-Interlock.GoodBoard",
+                                "Description": "Good Board Interlock",
+                                "Group": "lan2",
+                                "Subjects": ["value", "enabled", "interlock-latched", "divert", "divert-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched", "divert", "divert-latched"]
+                            },
+                            "BadBoardEvent": {
+                                "Guid": "f04ad244-600e-447d-ad8f-451036f701a1",
+                                "Id": "lan2-Interlock.BadBoard",
+                                "Description": "Bad Board Interlock",
+                                "Group": "lan2",
+                                "Subjects": ["value", "enabled", "interlock-latched", "divert", "divert-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched", "divert", "divert-latched"]
+                            },
+                            "MachineReadyBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": true,
+                                "UnblockedEnabled": true,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "f61ccffb-8622-43c1-95c0-a45f323635df",
+                                "Id": "lan2-Interlock.MachineReady.Block",
+                                "Description": "Machine Ready Interlock Blocking",
+                                "Group": "lan2",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "GoodBoardBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": true,
+                                "UnblockedEnabled": true,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "c8db9aef-ce34-4dfe-aa6e-9eab492a4495",
+                                "Id": "lan2-Interlock.GoodBoard.Block",
+                                "Description": "Good Board Interlock Blocking",
+                                "Group": "lan2",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "BadBoardBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": true,
+                                "UnblockedEnabled": true,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "175a2270-ccaf-4e9e-b9ae-47052f088568",
+                                "Id": "lan2-Interlock.BadBoard.Block",
+                                "Description": "Bad Board Interlock Blocking",
+                                "Group": "lan2",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "FlipBoardBlockEvent": {
+                                "BlockedValue": "true",
+                                "UnblockedValue": "false",
+                                "BlockedEnabled": false,
+                                "UnblockedEnabled": false,
+                                "BlockedDelay": 0,
+                                "UnblockedDelay": 0,
+                                "Guid": "7e573657-d6fa-42f7-8c3c-16ecb57a080e",
+                                "Id": "lan2-Interlock.FlipBoard.Block",
+                                "Description": "Flip Board Interlock Blocking",
+                                "Group": "lan2",
+                                "Subjects": ["blocked", "smema"],
+                                "Keys": ["blocked", "smema"]
+                            },
+                            "FlipBoardEvent": {
+                                "Guid": "51381e82-15d9-4a3d-acc6-e3c7c0a95cd2",
+                                "Id": "lan2-Interlock.FlipBoard",
+                                "Description": "Flip Board Interlock",
+                                "Group": "lan2",
+                                "Subjects": ["value", "enabled", "interlock-latched"],
+                                "Keys": ["value", "enabled", "interlock-latched"]
+                            },
+                            "StartupMachineReady": 0,
+                            "StartupGoodBoard": 0,
+                            "StartupBadBoard": 0,
+                            "StartupFlipBoard": 0,
+                            "PersistentMachineReady": false,
+                            "PersistentMachineReadyLatch": false,
+                            "PersistentGoodBoard": false,
+                            "PersistentGoodBoardLatch": false,
+                            "PersistentBadBoard": false,
+                            "PersistentBadBoardLatch": false,
+                            "PersistentFlipBoard": false,
+                            "PersistentFlipBoardLatch": false,
+                            "PermissionInterfaceUI": true,
+                            "PermissionInterfaceREST": true,
+                            "PermissionInterfaceSubscriptions": true,
+                            "TriggerBlockGoodBoardOnMachineNotReady": false,
+                            "TriggerBlockBadBoardOnMachineNotReady": false,
+                            "TriggerBlockFlipBoardOnMachineNotReady": false,
+                            "TriggerBlockFlipBoardOnGoodBoardNotAvailable": false,
+                            "TriggerBlockFlipBoardOnBadBoardNotAvailable": false,
+                            "DelayFlipThenBoardAvailable": 0,
+                            "DelayGoodBoardUnblockedThenSMEMA": 0,
+                            "DelayGoodBoardDivertUnblockedThenSMEMA": 0,
+                            "DelayBadBoardUnblockedThenSMEMA": 0,
+                            "DelayBadBoardDivertUnblockedThenSMEMA": 0,
+                            "DelayMachineReadyUnblockedThenSMEMA": 0,
+                            "DelayFlipUnblockedThenSMEMA": 0
+                        },
+                        "Guid": "lan2",
+                        "LaneId": "2",
+                        "MachineId": "Interlock B",
+                        "RightToLeft": false,
+                        "LoggingLevel": 0
+                    }
+                ]
+            }
+        }, {
+            "assembly": "MultiPlug.Ext.4IR.SOS",
+            "version": "1.0.2.0",
+            "properties": {}
+        }, {
+            "assembly": "MultiPlug.Ext.Network.HTTP",
+            "version": "1.0.4.0",
+            "properties": {
+                "HttpEndpoints": [],
+                "HttpClients": [{
+                        "Guid": "19af304c-8d45-49a2-9889-320734f26141",
+                        "Verb": "Get",
+                        "Url": "https://www.multiplug.app",
+                        "Subscriptions": [{
+                                "SubjectRenames": [{
+                                        "Rename": "",
+                                        "AddToQuery": true,
+                                        "AddToBody": false
+                                    }
+                                ],
+                                "Guid": "b88f71ed-9875-4460-a8bb-e4e148ebe594",
+                                "Id": "lan1-Interlock.MachineReady.Block[0]"
+                            }
+                        ],
+                        "ResponseEvent": {
+                            "Guid": "b4f7a8f0-928b-4e80-8bd6-500b2379bdf5",
+                            "Id": "ec4572e8-6f33-4318-9f2b-fa9932c6f031",
+                            "Description": "HTTP Response",
+                            "Group": "HttpClient",
+                            "Subjects": ["Response", "StatusCode", "Headers"],
+                            "Keys": ["Response", "StatusCode", "Headers"]
+                        },
+                        "Headers": [],
+                        "QueryParams": [],
+                        "BodyParams": [],
+                        "SubjectValueRenames": []
+                    }, {
+                        "Guid": "8db4ef24-d944-4417-af81-6fe46f004302",
+                        "Verb": "Get",
+                        "Url": "https://www.multiplug.app",
+                        "Subscriptions": [{
+                                "SubjectRenames": [{
+                                        "Rename": "",
+                                        "AddToQuery": true,
+                                        "AddToBody": false
+                                    }
+                                ],
+                                "Guid": "34d1e3de-4a23-40fe-a266-5212a393e728",
+                                "Id": "lan1-Interlock.GoodBoard.Block[0]"
+                            }
+                        ],
+                        "ResponseEvent": {
+                            "Guid": "e89d2956-1140-436e-bbac-861b6ce6beaa",
+                            "Id": "2bc2e636-96d7-4018-ba13-e0b4ac222872",
+                            "Description": "HTTP Response",
+                            "Group": "HttpClient",
+                            "Subjects": ["Response", "StatusCode", "Headers"],
+                            "Keys": ["Response", "StatusCode", "Headers"]
+                        },
+                        "Headers": [],
+                        "QueryParams": [],
+                        "BodyParams": [],
+                        "SubjectValueRenames": []
+                    }, {
+                        "Guid": "a9637716-a784-4ee6-b1bf-6f26f1ff685c",
+                        "Verb": "Get",
+                        "Url": "https://www.multiplug.app",
+                        "Subscriptions": [{
+                                "SubjectRenames": [{
+                                        "Rename": "",
+                                        "AddToQuery": true,
+                                        "AddToBody": false
+                                    }
+                                ],
+                                "Guid": "f18b2d5a-0917-4e9a-9200-da19bb9e7ea6",
+                                "Id": "lan1-Interlock.BadBoard.Block[0]"
+                            }
+                        ],
+                        "ResponseEvent": {
+                            "Guid": "45e269f2-f833-4264-96fb-2c1437037047",
+                            "Id": "4c5a4188-045d-4e45-9feb-8a057b4b005e",
+                            "Description": "HTTP Response",
+                            "Group": "HttpClient",
+                            "Subjects": ["Response", "StatusCode", "Headers"],
+                            "Keys": ["Response", "StatusCode", "Headers"]
+                        },
+                        "Headers": [],
+                        "QueryParams": [],
+                        "BodyParams": [],
+                        "SubjectValueRenames": []
+                    }
+                ]
+            }
+        }, {
+            "assembly": "MultiPlug.Ext.HostAPd.Config",
+            "version": "1.0.0.0",
+            "properties": {}
+        }, {
+            "assembly": "MultiPlug.Ext.MPLib",
+            "version": "1.0.9.0",
+            "properties": {}
+        }, {
+            "assembly": "MultiPlug.Ext.RasPi.Config",
+            "version": "1.0.15.0",
+            "properties": {
+                "Overview": {
+                    "RaspberryPiModel": null,
+                    "OSVersion": null,
+                    "GPUTemperature": null,
+                    "FreeDiskPercentage": null
+                },
+                "Network": {
+                    "HostName": null,
+                    "WiFiCountry": null
+                },
+                "Hat": {
+                    "Product": null,
+                    "ProductId": null,
+                    "ProductVersion": null,
+                    "UUID": null,
+                    "Vendor": null
+                },
+                "Interfacing": {
+                    "Camera": false,
+                    "I2C": false,
+                    "OneWire": false,
+                    "RemoteGPIO": false,
+                    "Serial": false,
+                    "SPI": false,
+                    "SSH": false,
+                    "VNC": false
+                },
+                "Localisation": {
+                    "WifiCountry": null,
+                    "Date": null,
+                    "Time": null,
+                    "TimeSyncdEnabled": false,
+                    "FakeHWClockEnabled": false,
+                    "TimeZone": null,
+                    "WiFiCountrySyncEnabled": true
+                },
+                "Boot": {},
+                "Memory": {}
+            }
+        }, {
+            "assembly": "MultiPlug.Ext.RasPi.GPIO",
+            "version": "1.0.16.0",
+            "properties": {
+                "RaspberryPi": {
+                    "GPIO": [{
+                            "BcmPinNumber": "5",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "f116dbe3-2297-4a49-ba24-c26997de9a93",
+                                "Id": "SMEMA-2-A-2",
+                                "Description": "SMEMA Lane 2 Port A Good PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "1",
+                                    "Low": "0",
+                                    "Guid": "dd2c93f8-e2be-486e-957c-5fba611f55a8",
+                                    "Id": "lan2-SMEMABoardAvailable"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "6",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "52ba5211-3310-437c-a9d9-2625e2d3851b",
+                                "Id": "SMEMA-2-A-3",
+                                "Description": "SMEMA Lane 2 Port A Bad PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "1",
+                                    "Low": "0",
+                                    "Guid": "adfc5245-b20a-4b72-9c42-09cf72d1f4f3",
+                                    "Id": "lan2-SMEMAFailedBoardAvailable"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "7",
+                            "Output": "",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "38812700-793c-470e-9314-ed69c6ca0390",
+                                "Id": "3317939f-4792-41be-aaa6-e4f5102e205a",
+                                "Description": "BCM Pin: 7",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "8",
+                            "Output": "",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "e85e7f5c-7731-47fa-93c2-0a11c3e227e5",
+                                "Id": "a4eadffb-4d3d-44f1-844b-05077654ab9e",
+                                "Description": "BCM Pin: 8",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "9",
+                            "Output": "",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "a35838d6-0ea4-4fde-8ec0-18cfdfe7d9a6",
+                                "Id": "4a2d079a-c022-43a1-836c-aa0a70439ea4",
+                                "Description": "BCM Pin: 9",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "10",
+                            "Output": "",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "fa197416-2574-4283-a784-55c8ed7d0d33",
+                                "Id": "e5dc7cd1-0bff-4a0d-bd65-079fa2f25a1a",
+                                "Description": "BCM Pin: 10",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "11",
+                            "Output": "",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "85f63690-7fe0-4812-a748-aa80c67ca5eb",
+                                "Id": "7c471abf-6c2e-48a8-9e4c-81812df3d413",
+                                "Description": "BCM Pin: 11",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "12",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 1,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "7073bbed-a44b-4931-8ec2-67eed7987892",
+                                "Id": "a5ad188a-1c3c-49f5-a8ad-a200be4b315b",
+                                "Description": "Status LED Red",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "true",
+                                    "Low": "false",
+                                    "Guid": "cd879423-6ebe-41c8-b0fa-2b6d904fe044",
+                                    "Id": "SMEMA.Global.Status[0]"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "13",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 3,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "8ad7ea79-b778-46e7-95c4-f541584649d2",
+                                "Id": "2bc0b69e-c2dd-4e1c-9150-9f8c6e143811",
+                                "Description": "Status LED Green",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "false",
+                                    "Low": "true",
+                                    "Guid": "a2ca872c-df85-4722-bd23-bd824dd7e503",
+                                    "Id": "SMEMA.Global.Status[0]"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "16",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "99940627-44f8-4f0a-9a01-32bf260c45ab",
+                                "Id": "c88e2085-9ce1-4fe4-88e5-58e98cb95042",
+                                "Description": "BUZZER",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "17",
+                            "Output": "false",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 10,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "b52fd7e6-71d0-406a-921f-09cfc4460794",
+                                "Id": "SMEMA-1-B-2",
+                                "Description": "SMEMA Lane 1 Port B Good PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "19",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "58dc09c0-9122-458f-971b-ac85dc6dc912",
+                                "Id": "SMEMA-2-A-1",
+                                "Description": "SMEMA Lane 2 Port B Machine Ready",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "1",
+                                    "Low": "0",
+                                    "Guid": "6a9d3fcb-0c4d-4070-96e8-063edf88c295",
+                                    "Id": "lan2-SMEMAMachineReady"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "20",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "baace7d0-8ba4-496f-866c-8473bdc1df30",
+                                "Id": "SMEMA-1-A-3",
+                                "Description": "SMEMA Lane 1 Port A Bad PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "1",
+                                    "Low": "0",
+                                    "Guid": "c6a533ba-6986-44b6-8808-da2ca301867d",
+                                    "Id": "lan1-SMEMAFailedBoardAvailable"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "21",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "f10aaa8a-927b-4c23-827c-d4725e56d2cc",
+                                "Id": "SMEMA-1-A-2",
+                                "Description": "SMEMA Lane 1 Port A Good PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "1",
+                                    "Low": "0",
+                                    "Guid": "190197eb-d8c0-43dd-b5c6-9243254f1dac",
+                                    "Id": "lan1-SMEMABoardAvailable"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "22",
+                            "Output": "false",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 10,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "bb40deb8-f6fc-4335-8482-9aa4c3ce010d",
+                                "Id": "SMEMA-1-A-1",
+                                "Description": "SMEMA Lane 1 Port A Machine Ready",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "23",
+                            "Output": "false",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 10,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "aefecdc8-4da3-4c73-8be8-fe9c17781933",
+                                "Id": "SMEMA-2-B-2",
+                                "Description": "SMEMA Lane 2 Port B Good PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "24",
+                            "Output": "false",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 10,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "2ec2ae2d-2a03-4061-b6bd-ec1492b0a99c",
+                                "Id": "SMEMA-2-B-3",
+                                "Description": "SMEMA Lane 2 Port B Bad PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "25",
+                            "Output": "false",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 10,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "b56b298d-7300-420b-ba88-5e9cd8243a95",
+                                "Id": "SMEMA-2-A-1",
+                                "Description": "SMEMA Lane 2 Port A Machine Ready",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }, {
+                            "BcmPinNumber": "26",
+                            "Output": "true",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 3,
+                            "Debounce": 40,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "3a58244a-0df5-463b-864e-d00e97cbaece",
+                                "Id": "SMEMA-1-B-1",
+                                "Description": "SMEMA Lane 1 Port B Machine Ready",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": [{
+                                    "High": "1",
+                                    "Low": "0",
+                                    "Guid": "eb559516-ce46-48da-9688-752257257b49",
+                                    "Id": "lan1-SMEMAMachineReady"
+                                }
+                            ]
+                        }, {
+                            "BcmPinNumber": "27",
+                            "Output": "false",
+                            "PullMode": 0,
+                            "InitState": 0,
+                            "ShutdownState": 0,
+                            "Debounce": 10,
+                            "Event": {
+                                "HighValue": "1",
+                                "LowValue": "0",
+                                "Guid": "7a543dc5-793b-4641-83a4-5215d44884a6",
+                                "Id": "SMEMA-1-B-3",
+                                "Description": "SMEMA Lane 1 Port B Bad PCB",
+                                "Group": "",
+                                "Subjects": ["value"],
+                                "Keys": ["value"]
+                            },
+                            "Subscriptions": []
+                        }
+                    ],
+                    "LoggingLevel": 0
+                }
+            }
+        }
+    ]
+}
